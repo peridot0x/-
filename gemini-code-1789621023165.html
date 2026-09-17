@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공강스팟 - 대학생 공강 매칭 웹앱</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 영역 (푸른 계열 배경색 적용, 시맨틱 태그) -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Gonggang Spot</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#add-friend">친구 추가</a></li>
+                    <li><a href="#select-friend">친구 선택</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main>
+        <!-- 섹션 1: 친구 추가 -->
+        <section id="add-friend" class="content-section">
+            <h2>친구 추가하기</h2>
+            <p>내 시간표를 공유하거나 친구의 시간표 코드를 등록해보세요.</p>
+            <div class="card">
+                <input type="text" id="friend-code-input" placeholder="친구의 공유 코드를 입력하세요">
+                <button id="add-btn">친구 등록</button>
+            </div>
+        </section>
+
+        <!-- 섹션 2: 친구 선택 및 공강 비교 -->
+        <section id="select-friend" class="content-section">
+            <h2>친구 선택 및 공강 확인</h2>
+            <p>함께 공강 시간을 비교할 친구를 선택하세요.</p>
+            <div class="card">
+                <select id="friend-select">
+                    <option value="">-- 친구를 선택하세요 --</option>
+                    <option value="friend1">김철수 (등록된 친구)</option>
+                    <option value="friend2">영희 (등록된 친구)</option>
+                </select>
+                <button id="compare-btn">겹치는 공강 시간 찾기</button>
+                <div id="result-box" class="result-box">
+                    <p>친구를 선택하고 버튼을 누르면 겹치는 공강 시간이 여기에 표시됩니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 섹션 3: CONTACT -->
+        <section id="contact" class="content-section">
+            <h2>CONTACT</h2>
+            <p>개발자에게 피드백을 남겨주세요!</p>
+            <form id="contact-form">
+                <input type="text" placeholder="이름 또는 닉네임" required>
+                <textarea placeholder="건의사항이나 문의 내용을 입력하세요" required></textarea>
+                <button type="submit">메시지 보내기</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 푸터 영역 -->
+    <footer>
+        <p>&copy; 2026 Gonggang Spot. All rights reserved.</p>
+    </footer>
+
+    <!-- 자바스크립트 파일 연결 -->
+    <script src="myja.js"></script>
+</body>
+</html>
